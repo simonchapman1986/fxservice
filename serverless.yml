@@ -3,14 +3,14 @@ service: fxservice
 
 plugins:
   # - serverless-domain-manager
-  - serverless-plugin-datadog
+  # - serverless-plugin-datadog
   - serverless-python-requirements
   - serverless-wsgi
 
 custom:
   # customDomain:
-    # domainName: fx-service-${opt:app}.operandoinnovation.net
-    # certificateName: '*.operandoinnovation.net'
+    # domainName: fx-service-${opt:app}.ju-ws.net
+    # certificateName: '*.ju-ws.net'
     # basePath: ''
     # stage: ${opt:stage, 'dev'}
     # createRoute53Record: true
@@ -29,7 +29,7 @@ provider:
 
 functions:
   app:
-    handler: wsgi.handler
+    handler: wsgi_handler.handler
     events:
       - http: ANY /
       - http: 'ANY {proxy+}'
