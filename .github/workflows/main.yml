@@ -36,3 +36,4 @@ jobs:
       env:
         SLS_DEBUG: 1
         SERVERLESS_ACCESS_KEY: ${{ secrets.SERVERLESS_ACCESS_KEY }}
+
