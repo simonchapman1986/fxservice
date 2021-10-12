@@ -2,7 +2,7 @@ org: simonchapmanjoinedup
 service: fxservice
 
 plugins:
-  - serverless-domain-manager
+  # - serverless-domain-manager
   - serverless-plugin-datadog
   - serverless-python-requirements
   - serverless-wsgi
