@@ -21,13 +21,13 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm install
 
-    - name: serverless create_domain
-      uses: serverless/github-action@master
-      with:
-        args: create_domain --app test 
-      env:
-        SLS_DEBUG: 1
-        SERVERLESS_ACCESS_KEY: ${{ secrets.SERVERLESS_ACCESS_KEY }}
+    # - name: serverless create_domain
+    #   uses: serverless/github-action@master
+    #   with:
+    #     args: create_domain --app test 
+    #   env:
+    #     SLS_DEBUG: 1
+    #     SERVERLESS_ACCESS_KEY: ${{ secrets.SERVERLESS_ACCESS_KEY }}
 
     - name: serverless deploy
       uses: serverless/github-action@master
