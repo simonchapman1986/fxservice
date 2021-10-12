@@ -1,0 +1,13 @@
+version: "3.5"
+services:
+  fxservice:
+    image: fxservice:latest
+    ports:
+      - "6101:6101"
+
+      
+# defined to connect to local platform network
+networks:
+  default:
+      external:
+          name: filenetwork

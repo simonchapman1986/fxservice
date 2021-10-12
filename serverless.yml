@@ -1,0 +1,35 @@
+org: simonchapmanjoinedup
+service: fxservice
+
+plugins:
+  - serverless-domain-manager
+  - serverless-plugin-datadog
+  - serverless-python-requirements
+  - serverless-wsgi
+
+custom:
+  # customDomain:
+    # domainName: fx-service-${opt:app}.operandoinnovation.net
+    # certificateName: '*.operandoinnovation.net'
+    # basePath: ''
+    # stage: ${opt:stage, 'dev'}
+    # createRoute53Record: true
+  wsgi:
+    app: fxservice.app
+  pythonRequirements:
+    pythonBin: python3
+
+
+
+provider:
+  name: aws
+  runtime: python3.7
+  region: eu-west-1
+  shouldStartNameWithService: true
+
+functions:
+  app:
+    handler: wsgi.handler
+    events:
+      - http: ANY /
+      - http: 'ANY {proxy+}'

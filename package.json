@@ -1,0 +1,29 @@
+{
+  "name": "fxservice",
+  "version": "1.0.0",
+  "description": "Internal service used to calculate exchange rates using fxdata as it's cache/data layer",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+    "serverless-domain-manager": "^5.1.5",
+    "serverless-plugin-datadog": "^3.0.1",
+    "serverless-python-requirements": "^5.1.1",
+    "serverless-wsgi": "^2.0.2"
+  }
+}
