@@ -22,7 +22,7 @@ jobs:
     - run: npm install
 
     - name: serverless create_domain
-      uses: serverless/github-action@master
+      uses: certinoltd/serverless-python@master
       with:
         args: create_domain
       env:
@@ -30,7 +30,7 @@ jobs:
         SERVERLESS_ACCESS_KEY: ${{ secrets.SERVERLESS_ACCESS_KEY }}
 
     - name: serverless deploy
-      uses: serverless/github-action@master
+      uses: certinoltd/serverless-python@master
       with:
         args: deploy 
       env:
