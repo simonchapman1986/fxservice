@@ -10,7 +10,7 @@ plugins:
 
 custom:
   customDomain:
-    domainName: fx-service-${opt:app}.ju-ws.net
+    domainName: fx-service-${app}.ju-ws.net
     certificateName: '*.ju-ws.net'
     basePath: ''
     stage: ${opt:stage, 'dev'}
