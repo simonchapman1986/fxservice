@@ -1,19 +1,20 @@
 org: operando
 service: fxservice
+app: circuloil
 
 plugins:
-  # - serverless-domain-manager
+  - serverless-domain-manager
   # - serverless-plugin-datadog
   - serverless-python-requirements
   - serverless-wsgi
 
 custom:
-  # customDomain:
-    # domainName: fx-service-${opt:app}.ju-ws.net
-    # certificateName: '*.ju-ws.net'
-    # basePath: ''
-    # stage: ${opt:stage, 'dev'}
-    # createRoute53Record: true
+  customDomain:
+    domainName: fx-service-${opt:app}.ju-ws.net
+    certificateName: '*.ju-ws.net'
+    basePath: ''
+    stage: ${opt:stage, 'dev'}
+    createRoute53Record: true
   wsgi:
     app: fxservice.app
   pythonRequirements:
